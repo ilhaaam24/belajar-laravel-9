@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/{siswa}', function ($siswa) {
 //     return "<h1>Halo nama saya $siswa</h1>";
 // })->where('siswa', '[A-Za-z]+');
+
+Route::get("siswa", [SiswaController::class,'index']);
+Route::get("siswa/{id}", [SiswaController::class,'detail']);
 
 Route::get('/', [HalamanController::class, 'index']); 
 Route::get('/about', [HalamanController::class, 'about']); 
