@@ -13,17 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/{siswa}', function ($siswa) {
-//     return "<h1>Halo nama saya $siswa</h1>";
-// })->where('siswa', '[A-Za-z]+');
-
-Route::get("siswa", [SiswaController::class,'index']);
-Route::get("siswa/{id}", [SiswaController::class,'detail']);
+Route::resource('siswa', SiswaController::class);
 
 Route::get('/', [HalamanController::class, 'index']); 
 Route::get('/about', [HalamanController::class, 'about']); 
