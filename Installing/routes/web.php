@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\HalamanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/{siswa}', function ($siswa) {
+//     return "<h1>Halo nama saya $siswa</h1>";
+// })->where('siswa', '[A-Za-z]+');
+
+Route::get('/', [HalamanController::class, 'index']); 
+Route::get('/about', [HalamanController::class, 'about']); 
+Route::get('/contact', [HalamanController::class, 'contact']); 
