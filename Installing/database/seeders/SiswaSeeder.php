@@ -15,7 +15,7 @@ class SiswaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //php artisan db:seed --class=SiswaSeeder => menambahkan data siswa
         DB::table('siswa')->insert([
             'nama' => 'Budi',
             'nomor_induk' => 100,

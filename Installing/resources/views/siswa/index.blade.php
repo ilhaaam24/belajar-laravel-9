@@ -3,6 +3,7 @@
 <a href="/siswa/create" class="btn btn-primary btn-sm">Tambah Data Siswa</a>
   <table class="table">
    <thead>
+    <th>FOTO</th>
     <th>Nomor Induk</th>
     <th>Nama</th>
     <th>Alamat</th>
@@ -11,6 +12,9 @@
    <tbody>
     @foreach($data as $item)
     <tr>
+      <td>@if ($item->foto)
+          <img src="{{url('foto').'/'.$item->foto}}" alt=" {{$item->nama}}" style="max-width:50px; max-height:50px">
+      @endif</td>
       <td>{{$item->nomor_induk}}</td>
       <td>{{$item->nama}}</td>
       <td>{{$item->alamat}}</td>

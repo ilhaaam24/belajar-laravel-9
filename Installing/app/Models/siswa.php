@@ -13,5 +13,6 @@ class siswa extends Model
         'nomor_induk',
         'nama',
         'alamat',
+        'foto',
     ];
 }
