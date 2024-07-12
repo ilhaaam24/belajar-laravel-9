@@ -2,15 +2,17 @@
 @section('konten')
 
 <div>
-  <a href="/siswa" class="btn btn-secondary btn-sm mb-2">Kembali</a>
-  <h2>{{$data->nama}}</h2>
-  <p>
-    <b>Nomor Induk : </b>{{$data->nomor_induk}}
-  </p>
-  <p>
-    <b>Alamat      : </b>{{$data->alamat}}
-  </p>
-
+  <a class="btn btn-secondary mb-3" href="/siswa">Kembali</a>
+  <div class="card" style="width: 18rem;">
+    <img src="{{url('foto').'/'.$data->foto}}" class="card-img-top" style="max-width: 500px">
+    <div class="card-body">
+      <h5 class="card-title">{{$data->nama}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nomor Induk : {{$data->nomor_induk}}</li>
+      <li class="list-group-item">Alamat : {{$data->alamat}}</li>
+    </ul>
+  </div>
 </div>
     
 @endsection

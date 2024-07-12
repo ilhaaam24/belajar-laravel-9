@@ -34,7 +34,7 @@ class SessionController extends Controller
             //kalau otentikasi sukses
             // return 'sukses';
 
-            return redirect('siswa')->with('success','Login Berhasil');
+            return redirect('siswa')->with('success',Auth::user()->name.' Berhasil Login');
          }else{
             //kalau otentikasi gagal
             // return 'gagal';
@@ -44,7 +44,7 @@ class SessionController extends Controller
 
         function logout(){
             Auth::logout();
-            return redirect('sesi')->with('success','Logout Berhasil');
+            return redirect('sesi')->with('success','Berhasil Logout');
         }
 
         function register(){
@@ -83,7 +83,7 @@ class SessionController extends Controller
             //kalau otentikasi sukses
             // return 'sukses';
 
-            return redirect('siswa')->with('success',Auth::user()->name.' Login Berhasil');
+            return redirect('siswa')->with('success',Auth::user()->name.' Berhasil Daftar');
          }else{
             //kalau otentikasi gagal
             // return 'gagal';

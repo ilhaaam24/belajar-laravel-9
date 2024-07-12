@@ -13,6 +13,9 @@
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" name="password">
         </div>
+         <div class="mb-3">
+         <p>Belum mempunyai akun? <a href="/sesi/register">Register</a></p>
+        </div>
         <div class="mb-3 d-grid">
           <button name="submit" type="submit" class="btn btn-primary">Login</button>
         </div>
